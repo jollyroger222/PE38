@@ -55,20 +55,19 @@ def extract_vacancy_data(html):
 
     # Формирование строки в формате Markdown
     markdown = f"""
-# {title}
+    # {title}
 
-**Компания:** {company}
-**Зарплата:** {salary}
-**Опыт работы:** {experience}
-**Тип занятости и режим работы:** {employment_mode}
-**Местоположение:** {location}
+    **Компания:** {company}  
+    **Зарплата:** {salary}  
+    **Опыт работы:** {experience}  
+    **Тип занятости и режим работы:** {employment_mode}  
+    **Местоположение:** {location}  
 
-## Описание вакансии
-{description}
+    ## Описание вакансии
+    {description}
 
-## Ключевые навыки
-- {'\n- '.join(skills)}
-"""
+    ## Ключевые навыки
+    - """ + "\n- ".join(skills)
 
     return markdown.strip()
 
